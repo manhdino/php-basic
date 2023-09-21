@@ -1,0 +1,6 @@
+Phương thức gửi, nhận dữ liệu
+- get: Nhận dữ liệu
+- post: Gửi dữ liệu (Thêm mới)
+- put: Gửi dữ liệu (Gửi dữ liệu)
+- delete: Xóa dữ liệu
+- file: Upload file

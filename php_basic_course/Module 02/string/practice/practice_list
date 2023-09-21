@@ -1,0 +1,21 @@
+Bài 1: Viết chương trình lấy username của 1 email
+
+Bài 2: Viết chương trình lấy 5 ký tự cuối chuỗi
+
+Bài 3: Viết chương trình xoá chữ đầu tiên trong chuỗi
+
+Bài 4: Viết chương trình đảo ngược chữ đầu và chữ cuối trong chuỗi
+
+Bài 5: Nhập vào tên 1 người, viết chương trình in ra:
+- Họ và tên lót
+- Tên
+
+Bài 6: Viết chương trình in ra 50 chữ đầu tiên trong 1 chuỗi
+
+Bài 7: Viết chương trình kiểm tra độ mạnh của mật khẩu
+
+- Có độ dài tối thiểu là 6
+- Chứa ít nhất 1 chữ số (1234567890)
+- Chứa ít nhất kí tự chữ cái in thường (abc...z)
+- Chứa ít nhất 1 kí tự chữ cái in hoa (ABC...Z)
+- Chứa ít nhất 1 kí tự đặc biệt: !@#$%^&*()-+
