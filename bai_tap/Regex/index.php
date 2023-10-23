@@ -266,26 +266,35 @@ echo $content;
 // Negative lookahead: Cú pháp (?!ABC)
 // Positive lookbehind: Cú pháp (?<=ABC)
 // Negative lookbehind: Cú pháp (?<!ABC)
-// $content = 'unicode academy academy unicode';
-// Tình huống 1: Lấy chữ academy mà có chữ academy đứng sau nó
+$content = 'unicode academy academy unicode';
+Tình huống 1: Lấy chữ ac mà có chữ academy đứng sau nó
+$content = 'unicode ac academy unicode
+$pattern = '/ac(?=\sacademy)/';
 
-// Pattern viết như sau:
+Tình huống 2: Lấy chữ academy mà không có chữ academy đứng phía sau nó
+$content = 'unicode academy academy unicode';
+$pattern = '/academy(?!\sacademy)/;
 
-// $pattern = '/academy(?=\sacademy)/';
-// Tình huống 2: Lấy chữ academy mà không có chữ academy đứng phía sau nó
+Tình huồng 3: Lấy chữ academy mà có chữ unicode đứng phía trước nó
+$content = 'unicode academy academy unicode';
+$pattern = '/(?<=unicode\s)academy/';
 
-// Pattern viết như sau:
+Tình huống 5: Lấy chữ academy mà không có chữ unicode đứng phía trước nó
 
-// $pattern = '/academy(?!\sacademy)/;
-// Tình huồng 3: Lấy chữ academy mà có chữ unicode đứng phía trước nó
+Pattern viết như sau:
 
-// Pattern viết như sau:
-
-// $pattern = '/(?<=unicode\s)academy/';
-// Tình huống 5: Lấy chữ academy mà không có chữ unicode đứng phía trước nó
-
-// Pattern viết như sau:
-
-// $pattern = '/(?<!unicode\s)academy/';
+$pattern = '/(?<!unicode\s)academy/';
 
 */
+
+$pattern = '~^(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z])(?=.*[!@#\$%\^\*\(\)-\+]).{8,}$~';
+
+$password = 'AnAB@123';
+
+$checkPassword = preg_match($pattern, $password);
+
+if ($checkPassword){
+    echo 'Mật khẩu mạnh';
+}else{
+    echo 'Mật khẩu yếu';
+}
